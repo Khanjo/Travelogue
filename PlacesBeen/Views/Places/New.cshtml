@@ -11,8 +11,13 @@
 <body>
     <h1>New Place</h1>
     <form action="/places" method="post">
-        <label for="name">Name of place</label>
-        <input id="name" name="name" type="text" required>
+        <label for="city">Name of city</label>
+        <input id="city" name="city" type="text" required>
+        <label for="country">Name of country</label>
+        <input id="country" name="country" type="text" required>
+        <label for="journal">Journal entry</label>
+        <br>
+        <textarea rows="8" cols="80" id="journal" name="journal" type="text"></textarea>
         <button type="submit">Submit</button>
     </form>
 </body>

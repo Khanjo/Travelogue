@@ -17,14 +17,20 @@
     {
         <p>There are no items in the list.</p>
     }
-    <ul>
+    <ol>
         @foreach (Place place in Model)
         {
-            <li><a href='/places/@place.Id'>@place.Name</a></li>
+            <li><a href='/places/@place.Id'>@place.City</a></li>
         }
 
-    </ul>
-    <a href="/items/new">Add a new item.</a>
+    </ol>
+    <a href="/places/new">Add a new place</a>
+    <a href="/places">View all your places</a>
+    <form action="/places/delete" method="post">
+        <label for="id">Entry to delete:</label>
+        <input id="id" name="id" type="number">
+        <button type="submit" name="button">Delete Entry</button>
+    </form>
 </body>
 
 </html>
