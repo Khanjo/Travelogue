@@ -11,11 +11,11 @@
 <body>
     @using PlacesBeen.Models;
 
-    <h1>To Do List</h1>
+    <h1>Your Places</h1>
 
     @if (Model.Count == 0)
     {
-        <p>There are no items in the list.</p>
+        <p>There are no entries yet.</p>
     }
     <ol>
         @foreach (Place place in Model)
@@ -24,8 +24,8 @@
         }
 
     </ol>
-    <a href="/places/new">Add a new place</a>
-    <a href="/places">View all your places</a>
+    <a href="/places/new">Add a new entry</a>
+    <a href="/places">View all your entries</a>
     <form action="/places/delete" method="post">
         <label for="id">Entry to delete:</label>
         <input id="id" name="id" type="number">
